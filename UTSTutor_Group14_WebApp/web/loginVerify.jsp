@@ -15,9 +15,13 @@
     %>
 <html>
     <head>
+        <link rel="SHORTCUT ICON" href="favicon.ico" />
+        <link rel="icon" href="favicon.ico" type="image/ico" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Logging in...</title>
-    <p>Emword %>ail: <%= email %></p>
+        
+    <p>Email: <%= email %></p>
     <p>Password: <%= password %>
     </head>
     

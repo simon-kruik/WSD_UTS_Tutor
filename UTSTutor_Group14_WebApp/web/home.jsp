@@ -6,11 +6,14 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
 <html>
     <head>
+        <link rel="SHORTCUT ICON" href="favicon.ico" />
+        <link rel="icon" href="favicon.ico" type="image/ico" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
+        <title>UTSTutor</title>
+    </head>s
     <body>
         <h1>Hello World!</h1>
     </body>
