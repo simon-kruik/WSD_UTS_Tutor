@@ -4,12 +4,16 @@
     Author     : Simon
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="uts.wsd.*" contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<% String studentsFilePath = application.getRealPath("WEB-INF/students.xml"); 
+   String tutorsFilePath = application.getRealPath("WEB-INF/tutors.xml");
+%>
+
+
 <%
     String email = request.getParameter("email-field");
     String password = request.getParameter("password-field");
-    
     
     
     %>
