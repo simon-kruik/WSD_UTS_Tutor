@@ -7,18 +7,5 @@ and open the template in the editor.
 
 
 <tutors>
-    <tutor>
-        <name>
-            Simon Kruik
-        </name>
-        <email>
-            simon.kruik@.uts.edu.au  
-        </email>
-        <password>
-            TutorPass
-        </password>
-        <dob>
-            1998-08-22
-        </dob>
-    </tutor>
+    
 </tutors>

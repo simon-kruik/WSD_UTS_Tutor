@@ -48,4 +48,12 @@ public class Students implements Serializable {
         }
         return null; // No user with the right email found
     }
+    public boolean checkEmail(String email) {
+        for (Student student : students) {
+            if (student.getEmail().equals(email)) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
