@@ -37,7 +37,7 @@
             </table>
                     
             <ul>
-                <li><a href="edit_user.jsp">My Account</a></li>
+                <li><a href="account.jsp">My Account</a></li>
             </ul>
             
         <% } %>

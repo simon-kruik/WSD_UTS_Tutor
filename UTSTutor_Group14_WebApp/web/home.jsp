@@ -53,10 +53,12 @@
            
         %>
         
-        <p>Welcome, <%=name%>!</p>
+        <p>Welcome, <%=name%></p>
         <p>Your Email is <%=email%>.</p>
         <p>Your password is <%=password%>.</p>
-        <p>Your dob is <%-=dob%>.</p>
+        <p>Your dob is <%=dob%>.</p>
+        
+        <a href="logout.jsp">Logout</a>
         
     </body>
 </html>
