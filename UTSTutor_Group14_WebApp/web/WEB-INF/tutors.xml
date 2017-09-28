@@ -6,6 +6,19 @@ and open the template in the editor.
 -->
 
 
-<tutors>
-    
-</tutors>
+<users>
+    <user>
+        <name>Test</name>
+        <email>test</email>
+        <password>pass</password>
+        <dob>2000-02-22</dob>
+        <type>student</type>
+    </user>
+    <user>
+        <name>mr</name>
+        <email>email</email>
+        <password>pass</password>
+        <dob>2000-02-22</dob>
+        <type>tutor</type>
+    </user>
+</users>
