@@ -7,5 +7,10 @@ and open the template in the editor.
 
 
 <tutors>
-    
+    <tutor>
+        <name>Tutory Tute</name>
+        <email>test@anemail.com</email>
+        <password>12345</password>
+        <dob>2000-02-22</dob>
+    </tutor>
 </tutors>
