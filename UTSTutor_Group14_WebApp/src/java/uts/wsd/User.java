@@ -25,23 +25,12 @@ public class User implements Serializable{
     String password;
     @XmlElement(name="dob")
     String dob;
-    @XmlElement(name="type")
-    String type;
 
-    public User(String name, String email, String password, String dob, String type) {
+    public User(String name, String email, String password, String dob) {
         this.name = name;
         this.email = email;
         this.password = password;
         this.dob = dob;
-        this.type = type;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public User() {
