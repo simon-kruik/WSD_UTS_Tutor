@@ -1,7 +1,7 @@
 <%-- 
-    Document   : home
+    Document   : main
     Created on : 09/09/2017, 2:59:55 PM
-    Author     : Simon
+    Author     : Simon & Dallas
 --%>
 
 <%@page import="uts.wsd.*" contentType="text/html" pageEncoding="UTF-8"%>

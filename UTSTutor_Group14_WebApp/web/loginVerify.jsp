@@ -51,7 +51,7 @@
             Success!
         </h2>
         <p>
-        Successfully logged in as <%=student.getName()%>. Please click <a href="home.jsp">here</a> to go to the main page.
+        Successfully logged in as <%=student.getName()%>. Please click <a href="main.jsp">here</a> to go to the main page.
         </p> 
         <% } 
 else if (student == null && tutor == null) {

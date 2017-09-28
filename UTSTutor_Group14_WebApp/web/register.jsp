@@ -20,7 +20,7 @@
         <h1>Registration</h1>
         <table>
             <tr>
-            <form action="home.jsp" method="post">
+            <form action="main.jsp" method="post">
         <td>Email</td>  
                 <td><input type="text" name="email"></td>
             
