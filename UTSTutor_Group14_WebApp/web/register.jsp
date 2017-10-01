@@ -13,6 +13,7 @@
         <title>Register an account</title>
         <link rel="SHORTCUT ICON" href="favicon.ico" />
         <link rel="icon" href="favicon.ico" type="image/ico" />
+        
     </head>
     <body>        
         <h1>Registration</h1>
@@ -50,10 +51,24 @@
                 </td>
             </tr>
             <tr>
+            
+            
+            <tr>
+                <td>Tutor subject</td>
+                <td>
+                    <select name="subject">
+                        <option value="wsd">WSD</option>
+                        <option value ="usp">USP</option>
+                        <option value="sep">SEP</option>
+                        <option value="appProg">AppProg</option>
+                        <option value="mobileApp">MobileApp</option>
+                </td>
+            </tr>
                 <td></td>
 
                 <td><input type="submit" value="Submit"/></td>
             </tr>
+            
             </form>
         </table>
     </body>
