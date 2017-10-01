@@ -16,6 +16,7 @@
     </head>
     <body>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <h1>Register</h1>
         <table>
             <form action="account.jsp" method="post">
@@ -50,6 +51,8 @@
                         <option value="student">Student</option>
                         <option value="tutor">Tutor</option>
 =======
+=======
+>>>>>>> 7c0b7d5262a442aded8d49eb554b567fc4a42ebb
         
                
         <h1>Registration</h1>
@@ -82,6 +85,9 @@
                     <select name="type">
                         <option value="Student">Student</option>
                         <option value="Tutor">Tutor</option>
+<<<<<<< HEAD
+>>>>>>> 7c0b7d5262a442aded8d49eb554b567fc4a42ebb
+=======
 >>>>>>> 7c0b7d5262a442aded8d49eb554b567fc4a42ebb
                     </select>
                 </td>
@@ -89,7 +95,12 @@
             <tr>
                 <td></td>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <td><input type="submit" value="Submit"/></td>
+=======
+                <td><input type="submit" value="Register"></td>
+
+>>>>>>> 7c0b7d5262a442aded8d49eb554b567fc4a42ebb
 =======
                 <td><input type="submit" value="Register"></td>
 

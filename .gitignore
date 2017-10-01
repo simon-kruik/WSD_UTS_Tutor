@@ -1,6 +1,11 @@
 /UTSTutor_Group14_WebApp/build/
 <<<<<<< HEAD
+<<<<<<< HEAD
 /UTSTutor_Group14_WebApp/dist/
+=======
+/UTSTutor_Group14_WebApp/dist/
+*.properties
+>>>>>>> 7c0b7d5262a442aded8d49eb554b567fc4a42ebb
 =======
 /UTSTutor_Group14_WebApp/dist/
 *.properties

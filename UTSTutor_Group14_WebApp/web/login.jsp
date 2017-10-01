@@ -13,7 +13,11 @@
         <link rel="icon" href="favicon.ico" type="image/ico" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <title>Login</title>
+=======
+        <title>Login Page</title>
+>>>>>>> 7c0b7d5262a442aded8d49eb554b567fc4a42ebb
 =======
         <title>Login Page</title>
 >>>>>>> 7c0b7d5262a442aded8d49eb554b567fc4a42ebb
