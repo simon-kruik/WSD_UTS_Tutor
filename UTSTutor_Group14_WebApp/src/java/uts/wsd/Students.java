@@ -18,6 +18,7 @@ import javax.xml.bind.annotation.*;
 public class Students implements Serializable {
     @XmlElement(name="student")
     private ArrayList<Student> students = new ArrayList<Student>();
+    
 
     public Students() {
     }
@@ -47,5 +48,13 @@ public class Students implements Serializable {
             }
         }
         return null; // No user with the right email found
+    }
+    public boolean checkEmail(String email) {
+        for (Student student : students) {
+            if (student.getEmail().equals(email)) {
+                return false;
+            }
+        }
+        return true;
     }
 }

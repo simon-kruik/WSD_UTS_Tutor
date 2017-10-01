@@ -8,17 +8,9 @@ and open the template in the editor.
 
 <students>
     <student>
-        <name>
-            Simon Kruik
-        </name>
-        <email>
-            simon.kruik@student.uts.edu.au  
-        </email>
-        <password>
-            StudentPass
-        </password>
-        <dob>
-            1998-08-22
-        </dob>
+        <name> Dally </name>
+        <email> dally@gmail.com </email>
+        <password>123456</password>
+        <dob>2001-02-22</dob>
     </student>
 </students>
