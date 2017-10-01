@@ -33,8 +33,7 @@
            String name = request.getParameter("name");
            String password = request.getParameter("password");
            String dob = request.getParameter("dob");
-
-
+           
            if (request.getParameter("type").equals("Student") && students.checkEmail(email)) {
               Student user = new Student(name,email,password,dob);
               session.setAttribute("type","student");
@@ -53,11 +52,9 @@
            
         %>
         
-        <p>Welcome, <%=name%></p>
-        <p>Your Email is <%=email%>.</p>
-        <p>Your password is <%=password%>.</p>
-        <p>Your dob is <%=dob%>.</p>
-        
+        <h1>Welcome, <%=name%></h1>
+        <a href="account.jsp">My account</a>
+        <a href="studentmain.jsp">Make a booking</a>
         <a href="logout.jsp">Logout</a>
         
     </body>

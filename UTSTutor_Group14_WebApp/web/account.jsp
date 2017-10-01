@@ -12,8 +12,21 @@
         <link rel="icon" href="favicon.ico" type="image/ico" />        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Manage Account | UTSTutor</title>
+        <%
+           String email = request.getParameter("email");
+           String name = request.getParameter("name");
+           String password = request.getParameter("password");
+           String dob = request.getParameter("dob");
+        %>
+        <title>View account</title>
     </head>
     <body>
-        <h1>Account Settings:</h1>
+        <h1>Welcome, <%=name%></h1>
+        <p>Your email is <%=email%></p>
+        <p>Your name is <%=name%></p>
+        <p>Your password is <%=password%></p>
+        <p>Your date of birth is <%=dob%></p>
+        <a href="edit_account.jsp">Edit account details</a>
+        
     </body>
 </html>
