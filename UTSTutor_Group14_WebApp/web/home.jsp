@@ -2,7 +2,6 @@
     Document   : home
     Created on : 09/09/2017, 2:59:55 PM
     Author     : Simon
-    test123
 --%>
 
 <%@page import="uts.wsd.*" contentType="text/html" pageEncoding="UTF-8"%>
