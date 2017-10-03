@@ -7,5 +7,10 @@ and open the template in the editor.
 
 
 <students>
-   
+    <student>
+        <name>Dally</name>
+        <email>dally@gmail.com</email>
+        <password>123456</password>
+        <dob>2001-02-22</dob>
+    </student>
 </students>

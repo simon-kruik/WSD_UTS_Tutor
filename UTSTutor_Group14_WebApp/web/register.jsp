@@ -13,14 +13,13 @@
         <title>Register an account</title>
         <link rel="SHORTCUT ICON" href="favicon.ico" />
         <link rel="icon" href="favicon.ico" type="image/ico" />
-    </head>
-    <body>
         
-               
+    </head>
+    <body>        
         <h1>Registration</h1>
         <table>
             <tr>
-            <form action="home.jsp" method="post">
+            <form action="main.jsp" method="post">
         <td>Email</td>  
                 <td><input type="text" name="email"></td>
             
@@ -32,7 +31,7 @@
             
             </tr>
         
-       <tr>
+      <tr>
             <td>Password</td>  
                 <td><input type="password" name="password"></td>
             
@@ -47,14 +46,29 @@
                     <select name="type">
                         <option value="Student">Student</option>
                         <option value="Tutor">Tutor</option>
+
                     </select>
                 </td>
             </tr>
             <tr>
-                <td></td>
-                <td><input type="submit" value="Register"></td>
-
+            
+            
+            <tr>
+                <td>Tutor subject</td>
+                <td>
+                    <select name="subject">
+                        <option value="wsd">WSD</option>
+                        <option value ="usp">USP</option>
+                        <option value="sep">SEP</option>
+                        <option value="appProg">AppProg</option>
+                        <option value="mobileApp">MobileApp</option>
+                </td>
             </tr>
+                <td></td>
+
+                <td><input type="submit" value="Submit"/></td>
+            </tr>
+            
             </form>
         </table>
     </body>

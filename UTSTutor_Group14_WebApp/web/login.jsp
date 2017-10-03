@@ -12,7 +12,7 @@
         <link rel="SHORTCUT ICON" href="favicon.ico" />
         <link rel="icon" href="favicon.ico" type="image/ico" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Login</title>
     </head>
     <body>
         <h1>Please login:</h1>
@@ -37,7 +37,7 @@
             </form>
         </table>
         
-        <a href="index.jsp">index.jsp</a>
+        <a href="index.jsp">Return to main page</a>
         
     </body>
 </html>
