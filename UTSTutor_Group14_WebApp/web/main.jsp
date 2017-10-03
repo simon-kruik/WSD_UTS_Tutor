@@ -41,21 +41,52 @@
               students.addStudent(user);
               usersApp.updateStudentXML(students, studentsFilePath);
               
-           }
+              %>
+              <h1>Welcome, <%=name%></h1>
+              
+              <a href="booking.jsp">Make a booking</a>
+              <a href="account.jsp">My account</a>
+              
+              <form>
+              <input type="text" name="search" placeholder="Search for a tutor...">
+              <select name="subject">
+                  <option value="wsd">WSD</option>
+                  <option value ="usp">USP</option>
+                  <option value="sep">SEP</option>
+                  <option value="appProg">AppProg</option>
+                  <option value="mobileApp">MobileApp</option>
+              </select>
+              <select name="status">
+                  <option value="unavailable">Unavailable</option>
+                  <option value="available">Available</option>
+              </select>
+              <input type="submit" value="Submit">
+              </form>
+              
+        <%       }
            else if (request.getParameter("type").equals("Tutor") && tutors.checkEmail(email)) {
               Tutor user = new Tutor(name,email,password,dob);
               session.setAttribute("type","tutor");
               session.setAttribute("user",user);
               tutors.addTutor(user);
               usersApp.updateTutorsXML(tutors, tutorsFilePath);
+%>
+
+            <h1>Welcome, <%=name%></h1>
+              
+            <a href="booking.jsp">Make a booking</a>
+            <a href="account.jsp">My account</a>
+
+
+<%
            }
            
         %>
         
-        <h1>Welcome, <%=name%></h1>
-        <a href="account.jsp">My account</a>
-        <a href="studentmain.jsp">Make a booking</a>
-        <a href="logout.jsp">Logout</a>
+        
+        
+        
+        
         
     </body>
 </html>
