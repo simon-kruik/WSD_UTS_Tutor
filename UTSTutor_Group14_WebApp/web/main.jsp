@@ -16,13 +16,8 @@
     </head>
 
         <% 
-            
-           String email = request.getParameter("email");
-           String name = request.getParameter("name");
-           String password = request.getParameter("password");
-           String dob = request.getParameter("dob");
-           String type = request.getParameter("type");
            
+           // Set filepaths
            String studentsFilePath = application.getRealPath("WEB-INF/students.xml"); 
            String tutorsFilePath = application.getRealPath("WEB-INF/tutors.xml");
            
@@ -43,13 +38,23 @@
         <body>
         
         <% 
-            
+            //When being redirected from register
+           // If there are paremeters
+           if (request.getParameter("email") != null) {
+           // Store that stuff
+           String email = request.getParameter("email");
+           String name = request.getParameter("name");
+           String password = request.getParameter("password");
+           String dob = request.getParameter("dob");
+           String type = request.getParameter("type");
+          
             if (request.getParameter("type").equals("Student") && students.checkEmail(email)) {
               Student student = new Student(name,email,password,dob);
 
               session.setAttribute("student",student);
               students.addStudent(student);
               usersApp.updateStudentXML(students, studentsFilePath);
+           
         %>
         
             <p>Welcome, <%=name%> (<%=type%>) </p>
@@ -59,10 +64,7 @@
 
             <a href="logout.jsp">Logout</a>
             
-        <%
-              
 
-              %>
               <h1>Welcome, <%=name%></h1>
               
               <a href="booking.jsp">Make a booking</a>
