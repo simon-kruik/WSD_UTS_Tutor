@@ -21,7 +21,6 @@
            String name = request.getParameter("name");
            String password = request.getParameter("password");
            String dob = request.getParameter("dob");
-<<<<<<< HEAD:UTSTutor_Group14_WebApp/web/home.jsp
            String type = request.getParameter("type");
            
            String studentsFilePath = application.getRealPath("WEB-INF/students.xml"); 
@@ -36,7 +35,8 @@
                 
         <% 
             
-           Users users = usersApp.getUsers();
+           Students students = usersApp.getStudents();
+           Tutors tutors = usersApp.getTutors();
            
         %>
         
@@ -44,17 +44,12 @@
         
         <% 
             
-            if (request.getParameter("type").equals("Student") && users.checkEmail(email)) {
-              User user = new User(name,email,password,dob,type);
-=======
-           
-           if (request.getParameter("type").equals("Student") && students.checkEmail(email)) {
-              Student user = new Student(name,email,password,dob);
->>>>>>> d8fd4af584789c90348b55c59cd8f882136d2203:UTSTutor_Group14_WebApp/web/main.jsp
-              session.setAttribute("type","student");
-              session.setAttribute("user",user);
-              users.addUser(user);
-              usersApp.updateUserXMl(users, studentsFilePath);
+            if (request.getParameter("type").equals("Student") && students.checkEmail(email)) {
+              Student student = new Student(name,email,password,dob);
+
+              session.setAttribute("student",student);
+              students.addStudent(student);
+              usersApp.updateStudentXML(students, studentsFilePath);
         %>
         
             <p>Welcome, <%=name%> (<%=type%>) </p>
@@ -66,21 +61,7 @@
             
         <%
               
-<<<<<<< HEAD:UTSTutor_Group14_WebApp/web/home.jsp
-           }
-           else if (request.getParameter("type").equals("Tutor") && users.checkEmail(email)) {
-              User user = new User(name,email,password,dob,type);
-              session.setAttribute("type","tutor");
-              session.setAttribute("user",user);
-              users.addUser(user);
-              usersApp.updateUserXMl(users, tutorsFilePath);
-        %>
-        
-        <p>Welcome, <%=name%> (<%=type%>)</p>
-        <p>Your Email is <%=email%>.</p>
-        <p>Your password is <%=password%>.</p>
-        <p>Your dob is <%=dob%>.</p>
-=======
+
               %>
               <h1>Welcome, <%=name%></h1>
               
@@ -123,7 +104,6 @@
            
         %>
         
->>>>>>> d8fd4af584789c90348b55c59cd8f882136d2203:UTSTutor_Group14_WebApp/web/main.jsp
         
         
         
