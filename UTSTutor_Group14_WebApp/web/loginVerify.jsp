@@ -62,6 +62,9 @@
         }
            if (student != null) {
         %>
+        <script language="javascript">
+         window.location = "main.jsp";
+        </script>
         <h2>
             Success!
         </h2>
@@ -71,6 +74,9 @@
         <% } 
          if (tutor != null) {
         %>
+        <script language="javascript">
+         window.location = "main.jsp";
+        </script>
         <h2>
             Success!
         </h2>
@@ -79,7 +85,12 @@
         </p>
         <% } 
 else if (student == null && tutor == null) {
+        session.setAttribute("errorMessage", "Login Failed");
+    
         %>
+      <script language="javascript">
+         window.location = "login.jsp";
+      </script>
         <h2 style="color: red">
             Failure!
         </h2>

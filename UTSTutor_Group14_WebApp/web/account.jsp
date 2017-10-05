@@ -4,6 +4,7 @@
     Author     : Simon
 --%>
 
+<%@page import="uts.wsd.Student"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,6 +14,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Manage Account | UTSTutor</title>
         <%
+           Student student = (Student)session.getAttribute("student");
            String email = request.getParameter("email");
            String name = request.getParameter("name");
            String password = request.getParameter("password");
@@ -21,8 +23,8 @@
         <title>View account</title>
     </head>
     <body>
-        <h1>Welcome, <%=name%></h1>
-        <p>Your email is <%=email%></p>
+        <h1>Welcome, <%=student.getName()%></h1>
+        <p>Your email is <%=student.getEmail()%></p>
         <p>Your name is <%=name%></p>
         <p>Your password is <%=password%></p>
         <p>Your date of birth is <%=dob%></p>

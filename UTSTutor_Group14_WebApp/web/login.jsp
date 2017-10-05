@@ -14,10 +14,16 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login</title>
     </head>
+    <%
+        String errorMessage = " ";
+        if (session.getAttribute("errorMessage") != null) {
+            errorMessage = (String)session.getAttribute("errorMessage");
+        }
+        %>
     <body>
         <h1>Please login:</h1>
         <table>
-            <form action="main.jsp" method="post">
+            <form action="loginVerify.jsp" method="post">
             <tr>
                 <td>Email: </td>
                 <td>
@@ -33,6 +39,7 @@
             <tr>
                 <td></td>
                 <td><input type="submit" value="Login"/></td>
+                <td style="color:red"><%=errorMessage%></td>
             </tr>
             </form>
         </table>

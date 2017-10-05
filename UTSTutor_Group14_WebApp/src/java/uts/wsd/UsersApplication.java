@@ -23,9 +23,11 @@ public class UsersApplication implements Serializable{
     private Tutors tutors;
 
     public UsersApplication() {
+        super();
     }
 
     public UsersApplication(String studentsFilePath, String tutorsFilePath, Students students, Tutors tutors) {
+        super();
         this.studentsFilePath = studentsFilePath;
         this.tutorsFilePath = tutorsFilePath;
         this.students = students;
@@ -78,7 +80,7 @@ public class UsersApplication implements Serializable{
         this.tutors = tutors;
     }
     
-    public void updateStudentXML(Students students, String studentsFilePath) throws Exception {
+    public void updateStudentsXML(Students students, String studentsFilePath) throws Exception {
         this.students = students;
         this.studentsFilePath = studentsFilePath;
         JAXBContext jc = JAXBContext.newInstance(Students.class);

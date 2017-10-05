@@ -32,6 +32,7 @@
             
            Students students = usersApp.getStudents();
            Tutors tutors = usersApp.getTutors();
+           
            if (request.getParameter("email") != null && request.getParameter("type") == null) {
         %>
         
@@ -41,7 +42,7 @@
             }
             //When being redirected from register
            // If there are paremeters
-           else if (request.getParameter("email") != null) {
+           else if (request.getParameter("email") != null && request.getParameter("type") != null) {
            // Store that stuff
            String email = request.getParameter("email");
            String name = request.getParameter("name");
@@ -53,7 +54,16 @@
               Student student = new Student(name,email,password,dob);
               session.setAttribute("student",student);
               students.addStudent(student);
-              usersApp.updateStudentXML(students, studentsFilePath);
+              out.println(students.getStudents());
+              out.println(students.getStudents().get(0).getName());
+
+              out.println(students.getStudents().get(1).getName());
+
+              //out.println(students.getStudents().get(2).getName());
+
+              //out.println(students.getStudents().get(3).getName());
+
+              usersApp.updateStudentsXML(students, studentsFilePath);
             }
              if (request.getParameter("type").equals("Tutor") && tutors.checkEmail(email)) {
               Tutor tutor = new Tutor(name,email,password,dob);
@@ -70,7 +80,7 @@
             <p>Your Email is <%=student.getEmail()%>.</p>
             <p>Your password is <%=student.getPassword()%>.</p>
             <p>Your dob is <%=student.getDob()%>.</p>
-
+            <p>First is <%= students.getStudents().get(0).getName() %>
             <a href="logout.jsp">Logout</a>
             
 
