@@ -50,23 +50,30 @@
           
             if (request.getParameter("type").equals("Student") && students.checkEmail(email)) {
               Student student = new Student(name,email,password,dob);
-
               session.setAttribute("student",student);
               students.addStudent(student);
               usersApp.updateStudentXML(students, studentsFilePath);
             }
+             if (request.getParameter("type").equals("Tutor") && tutors.checkEmail(email)) {
+              Tutor tutor = new Tutor(name,email,password,dob);
+              session.setAttribute("tutor",tutor);
+              tutors.addTutor(tutor);
+              usersApp.updateTutorsXML(tutors, tutorsFilePath);
+            }   
+           }
+            Student student = (Student)session.getAttribute("student");
             if (session.getAttribute("student") != null) {
         %>
         
-            <p>Welcome, <%=name%> (<%=type%>) </p>
-            <p>Your Email is <%=email%>.</p>
-            <p>Your password is <%=password%>.</p>
-            <p>Your dob is <%=dob%>.</p>
+            <p>Welcome, <%=student.getName()%> (Student) </p>
+            <p>Your Email is <%=student.getEmail()%>.</p>
+            <p>Your password is <%=student.getPassword()%>.</p>
+            <p>Your dob is <%=student.getDob()%>.</p>
 
             <a href="logout.jsp">Logout</a>
             
 
-              <h1>Welcome, <%=name%></h1>
+              <h1>Welcome, <%=student.getName()%></h1>
               
               <a href="booking.jsp">Make a booking</a>
               <a href="account.jsp">My account</a>
@@ -87,19 +94,12 @@
               <input type="submit" value="Submit">
               </form>
               
-        <%       }
-           else if (request.getParameter("type").equals("Tutor") && tutors.checkEmail(email)) {
-              Tutor tutor = new Tutor(name,email,password,dob);
-              session.setAttribute("tutor",tutor);
-     
-              tutors.addTutor(tutor);
-              usersApp.updateTutorsXML(tutors, tutorsFilePath);
-            }
-
+        <%       }       
+            Tutor tutor = (Tutor)session.getAttribute("tutor");
             if (session.getAttribute("tutor") != null) {
 %>
 
-            <h1>Welcome, <%=name%></h1>
+            <h1>Welcome, <%=tutor.getName()%></h1>
               
             <a href="booking.jsp">Make a booking</a>
             <a href="account.jsp">My account</a>
@@ -107,11 +107,11 @@
 
 <%
            }
-           
+else if (session.getAttribute("student") == null && session.getAttribute("tutor") == null){
         %>
         
         
-        
+        <p> Nothing to see here folks... </p>
         
         
         
