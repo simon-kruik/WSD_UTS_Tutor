@@ -32,15 +32,16 @@
             
            Students students = usersApp.getStudents();
            Tutors tutors = usersApp.getTutors();
-           
+           if (request.getParameter("email") != null && request.getParameter("type") == null) {
         %>
         
         <body>
-        
+            <jsp:include page="loginVerify.jsp"/>
         <% 
+            }
             //When being redirected from register
            // If there are paremeters
-           if (request.getParameter("email") != null) {
+           else if (request.getParameter("email") != null) {
            // Store that stuff
            String email = request.getParameter("email");
            String name = request.getParameter("name");

@@ -17,17 +17,17 @@
     <body>
         <h1>Please login:</h1>
         <table>
-            <form action="loginVerify.jsp" method="post">
+            <form action="main.jsp" method="post">
             <tr>
                 <td>Email: </td>
                 <td>
-                    <input name="email-field" type="text"/>
+                    <input name="email" type="text"/>
                 </td>                
             </tr>
             <tr>
                 <td>Password: </td>
                 <td>
-                    <input name="password-field" type="password"/>
+                    <input name="password" type="password"/>
                 </td>
             </tr>
             <tr>

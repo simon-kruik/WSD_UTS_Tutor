@@ -22,9 +22,9 @@
     Tutors tutors = usersApp.getTutors();
     
     // Setting Tutor and Student values to null so they can be checked later on.
-    if(request.getParameter("email-field") != null) {
-    String email = request.getParameter("email-field");
-    String password = request.getParameter("password-field");
+    if(request.getParameter("email") != null) {
+    String email = request.getParameter("email");
+    String password = request.getParameter("password");
     
 %>
 <html>
