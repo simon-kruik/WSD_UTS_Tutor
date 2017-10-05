@@ -16,12 +16,15 @@
 
 
 <%
+    Student student = null;
+    Tutor tutor = null;
+    // Setting Tutor and Student values to null so they can be checked later on.
+    if(request.getParameter("email-field") != null) {
     String email = request.getParameter("email-field");
     String password = request.getParameter("password-field");
     Students students = usersApp.getStudents();
     Tutors tutors = usersApp.getTutors();
-    Student student = null;
-    Tutor tutor = null; // Setting Tutor and Student values to null so they can be checked later on.
+    
     
 %>
 <html>
@@ -35,7 +38,8 @@
     <body>
         <!--<p> Test if first user = <students.getStudents().get(0).getEmail()> // Checks if the students list has been loaded correctly -->
         <!--<p> Test if first tutor = <tutors.getTutors().get(0).getEmail()></p>// Checks if the tutors list has been loaded correctly-->
-        <% student = students.login(email, password);
+        <% 
+            student = students.login(email, password);
            if (student != null) {
                session.setAttribute("student",student);
                session.setAttribute("tutor",null);
@@ -47,22 +51,27 @@
                    session.setAttribute("tutor", tutor);
                }
            }
-           if (student != null) {
+        }
+        else {
+        student = (Student)session.getAttribute("student");
+        tutor = (Tutor)session.getAttribute("tutor");
+        }
+           if (session.getAttribute("student") != null) {
         %>
         <h2>
             Success!
         </h2>
         <p>
-        Successfully logged in as Student: <%=student.getName()%>. Please click <a href="main.jsp">here</a> to go to the main page.
+        Successfully logged in as Student: <%=student.getName()%>. <!--Please click <a href="main.jsp">here</a> to go to the main page. -->
         </p> 
         <% } 
-         if (tutor != null) {
+         if (session.getAttribute("tutor") != null) {
         %>
         <h2>
             Success!
         </h2>
         <p>
-        Successfully logged in as Tutor: <%=tutor.getName()%>. Please click <a href="main.jsp">here</a> to go to the main page.
+        Successfully logged in as Tutor: <%=tutor.getName()%>. 
         </p>
         <% } 
 else if (student == null && tutor == null) {
