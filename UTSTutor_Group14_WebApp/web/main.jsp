@@ -54,7 +54,8 @@
               session.setAttribute("student",student);
               students.addStudent(student);
               usersApp.updateStudentXML(students, studentsFilePath);
-           
+            }
+            if (session.getAttribute("student") != null) {
         %>
         
             <p>Welcome, <%=name%> (<%=type%>) </p>
@@ -88,11 +89,14 @@
               
         <%       }
            else if (request.getParameter("type").equals("Tutor") && tutors.checkEmail(email)) {
-              Tutor user = new Tutor(name,email,password,dob);
-              session.setAttribute("type","tutor");
-              session.setAttribute("user",user);
-              tutors.addTutor(user);
+              Tutor tutor = new Tutor(name,email,password,dob);
+              session.setAttribute("tutor",tutor);
+     
+              tutors.addTutor(tutor);
               usersApp.updateTutorsXML(tutors, tutorsFilePath);
+            }
+
+            if (session.getAttribute("tutor") != null) {
 %>
 
             <h1>Welcome, <%=name%></h1>

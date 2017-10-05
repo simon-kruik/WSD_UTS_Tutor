@@ -48,7 +48,7 @@ public class Tutors implements Serializable {
         }
         return null; // No user with the right email found
     }
-    public boolean checkEmail(String email) {
+    public boolean checkEmail(String email) { // Returns true if email not found
         for (Tutor tutor : tutors) {
             if (tutor.getEmail().equals(email)) {
                 return false;
