@@ -17,8 +17,11 @@ public class Booking implements Serializable {
     @XmlElement(name="studentEmail")
     String studentEmail;
     
-    @XmlElement(name="tutor")
-    String tutor;
+    @XmlElement(name="tutorName")
+    String tutorName;
+    
+    @XmlElement(name="tutorEmail")
+    String tutorEmail;
     
     @XmlElement(name="subject")
     String subject;
@@ -30,11 +33,12 @@ public class Booking implements Serializable {
         
     }
     
-    public Booking(String bookingID, String studentName, String studentEmail, String tutor, String subject, String status) {
+    public Booking(String bookingID, String studentName, String studentEmail, String tutorName, String tutorEmail, String subject, String status) {
         this.bookingID = bookingID;
         this.studentName = studentName;
         this.studentEmail = studentEmail;
-        this.tutor = tutor;
+        this.tutorName = tutorName;
+        this.tutorEmail = tutorEmail;
         this.subject = subject;
         this.status = status;
     }
@@ -52,8 +56,12 @@ public class Booking implements Serializable {
         this.studentEmail = studentEmail;
     }
 
-    public void setTutor(String tutor) {
-        this.tutor = tutor;
+    public void setTutorName(String tutorName) {
+        this.tutorName = tutorName;
+    }
+    
+    public void setTutorEmail(String tutorEmail) {
+        this.tutorEmail = tutorEmail;
     }
 
     public void setSubject(String subject) {
@@ -76,8 +84,12 @@ public class Booking implements Serializable {
         return studentEmail;
     }
 
-    public String getTutor() {
-        return tutor;
+    public String getTutorName() {
+        return tutorName;
+    }
+    
+    public String getTutorEmail() {
+        return tutorEmail;
     }
 
     public String getSubject() {
