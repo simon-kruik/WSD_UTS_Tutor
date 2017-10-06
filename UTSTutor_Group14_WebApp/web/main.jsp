@@ -12,7 +12,7 @@
         <link rel="SHORTCUT ICON" href="favicon.ico" />
         <link rel="icon" href="favicon.ico" type="image/ico" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Welcome</title>
+        <title>Main Page</title>
     </head>
 
         <% 
@@ -78,9 +78,6 @@
         
             <p>Welcome, <%=student.getName()%> (Student) </p>
             <p>Your Email is <%=student.getEmail()%>.</p>
-            <p>Your password is <%=student.getPassword()%>.</p>
-            <p>Your dob is <%=student.getDob()%>.</p>
-            <p>First is <%= students.getStudents().get(0).getName() %>
             <a href="logout.jsp">Logout</a>
             
 
