@@ -37,7 +37,6 @@
     %>
 
     <body>
-        <jsp:include page="loginVerify.jsp"/>
         <%
             } //When being redirected from register
             // If there are paremeters

@@ -1,4 +1,5 @@
-    <%-- 
+    <%@page import="java.util.regex.Pattern"%>
+<%-- 
     Document   : loginVerify
     Created on : 11/09/2017, 10:46:29 AM
     Author     : Simon
@@ -61,6 +62,7 @@
             }
         }
            if (student != null) {
+                session.setAttribute("errorMessage","");
         %>
         <script language="javascript">
          window.location = "main.jsp";
@@ -73,6 +75,8 @@
         </p> 
         <% } 
          if (tutor != null) {
+            session.setAttribute("errorMessage","");
+
         %>
         <script language="javascript">
          window.location = "main.jsp";
@@ -85,8 +89,16 @@
         </p>
         <% } 
 else if (student == null && tutor == null) {
-        session.setAttribute("errorMessage", "Login Failed");
-    
+        if (!Pattern.matches("[A-Za-z\\.]+@([a-z\\-])+(\\.([a-z\\-])+)+", request.getParameter("email"))) {
+                session.setAttribute("errorMessage","Email format incorrect");
+                }
+        else if (students.checkEmail(request.getParameter("email")) && tutors.checkEmail(request.getParameter("email"))) {
+                session.setAttribute("errorMessage","Email not found");
+                }
+        else {
+                session.setAttribute("errorMessage", "Password incorrect");
+        }
+
         %>
       <script language="javascript">
          window.location = "login.jsp";

@@ -29,17 +29,23 @@
                 <td>
                     <input name="email" type="text"/>
                 </td>                
+                <% if (errorMessage.contains("Email")) { %>
+                <td style="color:red"> <%=errorMessage%></td>
+                <% } %>
             </tr>
             <tr>
                 <td>Password: </td>
                 <td>
                     <input name="password" type="password"/>
                 </td>
+                <% if (errorMessage.contains("Password")) { %>
+                <td style="color:red"> <%=errorMessage%></td>
+                <% } %>
             </tr>
             <tr>
                 <td></td>
                 <td><input type="submit" value="Login"/></td>
-                <td style="color:red"><%=errorMessage%></td>
+                
             </tr>
             </form>
         </table>
