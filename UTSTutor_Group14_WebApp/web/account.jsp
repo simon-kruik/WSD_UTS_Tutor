@@ -15,7 +15,8 @@
         <title>Manage Account | UTSTutor</title>
 
        <% 
-            
+          
+           
            Student student = (Student)session.getAttribute("student");
            if (request.getParameter("email") != null && request.getParameter("type").equals("Student")) {
            String email = request.getParameter("email");
@@ -35,7 +36,16 @@
         %>
         <title>View account</title>
     </head>
-    <% if (session.getAttribute("student") != null) { 
+    
+    <% if (session.getAttribute("student") != null) {
+        String newName = request.getParameter("newName");
+        String newPassword = request.getParameter("newPassword");
+        String newDob = request.getParameter("newDob");
+        if (request.getParameter("newName") != null && request.getParameter("newPassword") != null && request.getParameter("newDob") != null) {
+        student.setName(newName);
+        student.setDob(newDob);
+        student.setPassword(newPassword);
+        }
     %>
     <body>
         <h1>Welcome, <%=student.getName()%></h1>
@@ -47,7 +57,15 @@
         <a href="main.jsp"> Back to Main Menu </a>
     
     </body>
-    <% } else if (session.getAttribute("tutor") != null) { 
+    <% } else if (session.getAttribute("tutor") != null) {
+        String newName = request.getParameter("newName");
+        String newPassword = request.getParameter("newPassword");
+        String newDob = request.getParameter("newDob");
+        if (request.getParameter("newName") != null && request.getParameter("newPassword") != null && request.getParameter("newDob") != null) {
+        tutor.setName(newName);
+        tutor.setDob(newDob);
+        tutor.setPassword(newPassword);
+        }
 %>
         <h1>Welcome, <%=tutor.getName()%></h1>
         <p>Your email is <%=tutor.getEmail()%></p>

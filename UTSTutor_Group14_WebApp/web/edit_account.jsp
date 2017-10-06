@@ -4,6 +4,7 @@
     Author     : 1234
 --%>
 
+<%@page import="uts.wsd.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,6 +13,7 @@
         <link rel="icon" href="favicon.ico" type="image/ico" /> 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Edit account</title>
+         
     </head>
     <body>
         <h1>Edit account details</h1>
@@ -19,16 +21,17 @@
         <table>
             <tr>
                 <td>Full Name</td>  
-                <td><input type="text" name="name"></td>
+                <td><input type="text" name="newName"></td>
+                
             </tr>
             <tr>
-            <td>Password</td>  
-                <td><input type="password" name="password"></td>
+                <td>Password</td>  
+                <td><input type="password" name="newPassword"></td>
             
             </tr>
             <tr>
                 <td>Date of Birth</td>
-                <td><input type="date" name="dob"></td>
+                <td><input type="date" name="newDob"></td>
             </tr>
             <tr>
                 <td></td>
