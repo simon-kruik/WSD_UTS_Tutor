@@ -39,5 +39,7 @@
             </tr>
         </table>
         </form>
+        <a href="account.jsp">Return to my account</a>
+        <a href="main.jsp">Back to Main Menu</a>
     </body>
 </html>
