@@ -13,7 +13,15 @@
         <title>Register an account</title>
         <link rel="SHORTCUT ICON" href="favicon.ico" />
         <link rel="icon" href="favicon.ico" type="image/ico" />
-        
+        <script language="javascript">
+                            function yesnoCheck(that) {
+                                if (that.value == "Tutor") {
+                                    document.getElementById("ifTutor").style.display = "";
+                                 } else {
+                                 document.getElementById("ifTutor").style.display="none";
+                                 }
+                }
+        </script>
     </head>
     <body>        
         <h1>Registration</h1>
@@ -43,18 +51,19 @@
             <tr>
                 <td>User type</td>
                 <td>
-                    <select name="type">
+                    <select name="type" onchange="yesnoCheck(this);">
                         <option value="Student">Student</option>
                         <option value="Tutor">Tutor</option>
 
                     </select>
                 </td>
             </tr>
-            <tr>
+
             
-            
-            <tr>
-                <td>Tutor subject</td>
+
+            <tr id="ifTutor" style="display:none;">
+                        
+                <td >Tutor subject</td>
                 <td>
                     <select name="subject">
                         <option value="wsd">WSD</option>
