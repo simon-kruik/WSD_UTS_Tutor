@@ -6,7 +6,12 @@ and open the template in the editor.
 -->
 
 
-<students>
+<students 
+    xmlns="http://learn.it.uts.edu.au/wsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://learn.it.uts.edu.au/wsd students.xsd"
+>
+    
     <student>
         <name>Dally</name>
         <email>dally@gmail.com</email>

@@ -62,19 +62,19 @@ public class Tutors implements Serializable {
     }
     
     public String printDetails() {
-        String details = "<table> \n" 
+        String details = "<table class='search'> \n" 
                 + "<tr> \n"
-                + "<td> Name </td>\n"
-                + "<td> Email </td> \n"
-                + "<td> Available </td> \n"
-                + "<td> Subject </td> \n"
+                + "<th class='search'> Name </th>\n"
+                + "<th class='search'> Email </th> \n"
+                + "<th class='search'> Available </th> \n"
+                + "<th class='search'> Subject </th> \n"
                 + "</tr> \n";
         for (Tutor tutor : tutors) {
             details += "<tr> \n"
-                    + "<td>" + tutor.getName() + "</td> \n"
-                    + "<td>" + tutor.getEmail() + "</td> \n"
-                    + "<td>" + tutor.getAvailable() + "</td> \n"
-                    + "<td>" + tutor.getSubject() + "</td> \n"
+                    + "<td class='search'>" + tutor.getName() + "</td> \n"
+                    + "<td class='search'>" + tutor.getEmail() + "</td> \n"
+                    + "<td class='search'>" + tutor.getAvailable() + "</td> \n"
+                    + "<td class='search'>" + tutor.getSubject() + "</td> \n"
                     + "</tr> \n";
         }
         details += "</table>";

@@ -9,6 +9,7 @@
 
 <html>
     <head>
+        <link rel="stylesheet" href="styles.css">
         <link rel="SHORTCUT ICON" href="favicon.ico" />
         <link rel="icon" href="favicon.ico" type="image/ico" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -47,6 +48,7 @@
                 String password = request.getParameter("password");
                 String dob = request.getParameter("dob");
                 String type = request.getParameter("type");
+                out.print(dob);
 
                 if (request.getParameter("type").equals("Student") && students.checkEmail(email)) {
                     Student student = new Student(name, email, password, dob);
@@ -115,7 +117,7 @@
 
 
         <p> Nothing to see here folks... </p>
-
+        <p> Please login or register again at <a href="index.jsp"> the main page </a></p>
 
 
         <%
