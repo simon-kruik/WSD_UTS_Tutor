@@ -25,12 +25,25 @@
             Tutors matchingTutors = new Tutors();
             String searchTerm = request.getParameter("searchTerm");
             String searchType = request.getParameter("searchType");
+            String noResults = "<h1> No search results found </h1>";
             if (searchType.equals("subject")) {
                     matchingTutors = tutors.searchSubject(searchTerm);
-                    out.print(matchingTutors.getTutors());
-
+                    if (matchingTutors.getTutors().isEmpty()) {
+                        session.setAttribute("searchResults",noResults);
+                    }
+                    else {
+                        session.setAttribute("searchResults",matchingTutors.printDetails());
+                    }
             }
+            else if (searchType.equals("availability")) {
+                
+            }
+            else if (searchType.equals("name")) {
+                
+            }
+
         %>
+        <%=session.getAttribute("searchResults")%>
         <p>You searched by: <%=searchType%>, searching for: <%=searchTerm%></p>
             
             <% } %>

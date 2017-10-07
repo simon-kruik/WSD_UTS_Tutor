@@ -61,6 +61,26 @@ public class Tutors implements Serializable {
         return true;
     }
     
+    public String printDetails() {
+        String details = "<table> \n" 
+                + "<tr> \n"
+                + "<td> Name </td>\n"
+                + "<td> Email </td> \n"
+                + "<td> Available </td> \n"
+                + "<td> Subject </td> \n"
+                + "</tr> \n";
+        for (Tutor tutor : tutors) {
+            details += "<tr> \n"
+                    + "<td>" + tutor.getName() + "</td> \n"
+                    + "<td>" + tutor.getEmail() + "</td> \n"
+                    + "<td>" + tutor.getAvailable() + "</td> \n"
+                    + "<td>" + tutor.getSubject() + "</td> \n"
+                    + "</tr> \n";
+        }
+        details += "</table>";
+        return details;
+    }
+    
     public Tutors searchSubject(String subject) {
         ArrayList<Tutor> matchingTutors = new ArrayList<Tutor>();
         subject = subject.toLowerCase();

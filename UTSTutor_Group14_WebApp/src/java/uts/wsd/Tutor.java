@@ -24,6 +24,8 @@ public class Tutor {
     String dob;
     @XmlElement(name="subject")
     String subject;
+    @XmlElement(name="available")
+    String available;
     public Tutor() {
         
     }
@@ -33,7 +35,15 @@ public class Tutor {
         this.email = email;
         this.password = password;
         this.dob = dob;
-        this.subject = "WSD";
+        this.available = "Yes";
+    }
+
+    public String getAvailable() {
+        return available;
+    }
+
+    public void setAvailable(String available) {
+        this.available = available;
     }
     
     public Tutor(String name, String email, String password, String dob, String subject) {
@@ -42,6 +52,7 @@ public class Tutor {
         this.password = password;
         this.dob = dob;
         this.subject = subject;
+        this.available="yes";
         
     }
 

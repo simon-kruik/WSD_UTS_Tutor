@@ -13,6 +13,7 @@ and open the template in the editor.
         <password>12345</password>
         <dob>2000-02-22</dob>
         <subject>WSD</subject>
+        <available>Yes</available>
     </tutor>
     <tutor>
         <name>Prof. Simon</name>
@@ -20,5 +21,6 @@ and open the template in the editor.
         <password>simon</password>
         <dob>1998-08-22</dob>
         <subject>SEP</subject>
+        <available>Yes</available>
     </tutor>
 </tutors>
