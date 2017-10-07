@@ -52,11 +52,10 @@
                     Student student = new Student(name, email, password, dob);
                     session.setAttribute("student", student);
                     students.addStudent(student);
-                    out.println(students.getStudents());
-                    out.println(students.getStudents().get(0).getName());
-
-                    out.println(students.getStudents().get(1).getName());
-
+                    // Commented out code used to verify that students are being added to a list
+                    // out.println(students.getStudents());
+                    //out.println(students.getStudents().get(0).getName());
+                    //out.println(students.getStudents().get(1).getName());
                     //out.println(students.getStudents().get(2).getName());
                     //out.println(students.getStudents().get(3).getName());
                     usersApp.updateStudentsXML(students, studentsFilePath);
