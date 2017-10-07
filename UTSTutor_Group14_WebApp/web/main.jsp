@@ -76,9 +76,9 @@
 
         <a href="booking.jsp">Make a booking</a>
         <a href="account.jsp">My account</a>
+        
 
-
-        <form>
+     <!--   <form>
             <input type="text" name="search" placeholder="Search for a tutor...">
             <select name="subject">
                 <option value="wsd">WSD</option>
@@ -93,6 +93,9 @@
             </select>
             <input type="submit" value="Submit">
         </form>
+     -->
+     <jsp:include page="search.jsp"/>  
+     <jsp:include page="searchAction.jsp"/>
         <a href="logout.jsp">Logout</a>
         
         <%       }

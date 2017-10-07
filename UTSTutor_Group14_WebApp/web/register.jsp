@@ -71,6 +71,7 @@
                         <option value="sep">SEP</option>
                         <option value="appProg">AppProg</option>
                         <option value="mobileApp">MobileApp</option>
+                    </select>
                 </td>
             </tr>
                 <td></td>
