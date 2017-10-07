@@ -36,10 +36,22 @@
                     }
             }
             else if (searchType.equals("availability")) {
-                
+                matchingTutors = tutors.searchAvailable(searchTerm);
+                    if (matchingTutors.getTutors().isEmpty()) {
+                        session.setAttribute("searchResults",noResults);
+                    }
+                    else {
+                        session.setAttribute("searchResults",matchingTutors.printDetails());
+                    }
             }
             else if (searchType.equals("name")) {
-                
+                matchingTutors = tutors.searchName(searchTerm);
+                    if (matchingTutors.getTutors().isEmpty()) {
+                        session.setAttribute("searchResults",noResults);
+                    }
+                    else {
+                        session.setAttribute("searchResults",matchingTutors.printDetails());
+                    }
             }
 
         %>

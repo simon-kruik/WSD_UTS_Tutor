@@ -91,4 +91,24 @@ public class Tutors implements Serializable {
         }
         return new Tutors(matchingTutors);
     }
+    public Tutors searchAvailable(String available) {
+        ArrayList<Tutor> matchingTutors = new ArrayList<Tutor>();
+        available = available.toLowerCase();
+        for (Tutor tutor : tutors) {
+            if (tutor.getAvailable().toLowerCase().equals(available)) {
+                matchingTutors.add(tutor);
+            }
+        }
+        return new Tutors(matchingTutors);
+    }
+    public Tutors searchName(String name) {
+        ArrayList<Tutor> matchingTutors = new ArrayList<Tutor>();
+        name = name.toLowerCase();
+        for (Tutor tutor : tutors) {
+            if (tutor.getName().toLowerCase().contains(name)) {
+                matchingTutors.add(tutor);
+            }
+        }
+        return new Tutors(matchingTutors);
+    }
 }
