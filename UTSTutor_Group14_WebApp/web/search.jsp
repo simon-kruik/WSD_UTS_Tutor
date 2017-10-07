@@ -16,7 +16,7 @@
         <table>
             <tr>
                 <td>Search by: </td>
-            <form action="searchAction.jsp" method="post">
+            <form action="main.jsp" method="post">
                 <td>
                     <select name="searchType">
                         <option value="subject">Subject</option>
