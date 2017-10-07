@@ -12,14 +12,76 @@ import javax.xml.bind.annotation.*;
  *
  * @author Simon
  */
-public class Tutor extends User {
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Tutor {
+    @XmlElement(name="name")
+    String name;
+    @XmlElement(name="email")
+    String email;
+    @XmlElement(name="password")
+    String password;
+    @XmlElement(name="dob")
+    String dob;
+    @XmlElement(name="subject")
+    String subject;
     public Tutor() {
         
     }
+    
     public Tutor(String name, String email, String password, String dob) {
         this.name = name;
         this.email = email;
         this.password = password;
         this.dob = dob;
+        this.subject = "WSD";
+    }
+    
+    public Tutor(String name, String email, String password, String dob, String subject) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.dob = dob;
+        this.subject = subject;
+        
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
     }
 }

@@ -25,7 +25,7 @@
                     </select>
                 </td>
                 <td>
-                    <input type="text" />
+                    <input name="searchTerm" type="text" />
                 </td>
                 <td>
                     <input type="submit" value="Submit"/>

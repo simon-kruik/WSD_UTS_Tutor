@@ -21,7 +21,11 @@ public class Tutors implements Serializable {
 
     public Tutors() {
     }
-
+    
+    public Tutors(ArrayList<Tutor> tutors) {
+        this.tutors = tutors;
+    }
+    
     public ArrayList<Tutor> getTutors() {
         return tutors;
     }
@@ -55,5 +59,16 @@ public class Tutors implements Serializable {
             }
         }
         return true;
+    }
+    
+    public Tutors searchSubject(String subject) {
+        ArrayList<Tutor> matchingTutors = new ArrayList<Tutor>();
+        subject = subject.toLowerCase();
+        for (Tutor tutor : tutors) {
+            if (tutor.getSubject().toLowerCase().equals(subject)) {
+                matchingTutors.add(tutor);
+            }
+        }
+        return new Tutors(matchingTutors);
     }
 }
