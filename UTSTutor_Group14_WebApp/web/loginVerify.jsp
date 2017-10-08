@@ -103,7 +103,7 @@ else if (student == null && tutor == null) {
 
         %>
       <script language="javascript">
-         //window.location = "login.jsp";
+         window.location = "login.jsp";
       </script>
         <h2 style="color: red">
             Failure!

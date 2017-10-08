@@ -11,7 +11,7 @@ and open the template in the editor.
     <!-- Type Declarations: -->
     <xs:simpleType name="name">
         <xs:restriction base="xs:string">
-        <xs:pattern value="[A-Za-z.\-]+\s?[A-Za-z.\-\s]"/>
+        <xs:pattern value="[A-Za-z.\-]+\s?[A-Za-z.\-\s]*"/>
     </xs:restriction>
     </xs:simpleType>
     
@@ -33,16 +33,30 @@ and open the template in the editor.
         </xs:restriction>
     </xs:simpleType>
     
-    <xs:element name="students">
+    <xs:simpleType name="available">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(Yes|No)"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+   <xs:simpleType name="subject">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(SEP|WSD|USP|AppProg|MobileApp)"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:element name="tutors">
         <xs:complexType>
             <xs:sequence>
-            <xs:element name="student" maxOccurs="unbounded">
+            <xs:element name="tutor" maxOccurs="unbounded">
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="name" type="name"/>
                         <xs:element name="email" type="email"/>
                         <xs:element name="password" type="password"/>
                         <xs:element name="dob" type="dob"/>
+                        <xs:element name="subject" type="subject"/>
+                        <xs:element name="available" type="available"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>

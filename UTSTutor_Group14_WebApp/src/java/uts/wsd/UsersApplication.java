@@ -5,12 +5,17 @@
  */
 package uts.wsd;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.Serializable;
+import javax.xml.XMLConstants;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
 
 /**
  *
@@ -40,12 +45,17 @@ public class UsersApplication implements Serializable{
 
     public void setStudentsFilePath(String studentsFilePath) throws Exception {
         this.studentsFilePath = studentsFilePath;
+        String studentsSchemaFilePath = studentsFilePath.substring(0, studentsFilePath.length() - 3) + "xsd";
+        
+        SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+        Schema schema = factory.newSchema(new StreamSource(new File(studentsSchemaFilePath)));
+        
         JAXBContext jc = JAXBContext.newInstance(Students.class);
         Unmarshaller u = jc.createUnmarshaller();
- 
+        u.setSchema(schema);
         // Now unmarshal the object from the file
         FileInputStream fin = new FileInputStream(studentsFilePath);
-        students = (Students)u.unmarshal(fin); // This loads the "users" object
+        students = (Students)u.unmarshal(fin); // This loads the "students" object
         fin.close();
     }
 
@@ -55,12 +65,19 @@ public class UsersApplication implements Serializable{
 
     public void setTutorsFilePath(String tutorsFilePath) throws Exception {
         this.tutorsFilePath = tutorsFilePath;
+        String tutorsSchemaFilePath = tutorsFilePath.substring(0, tutorsFilePath.length() - 3) + "xsd";
+
+        
+        
+        SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+        Schema schema = factory.newSchema(new StreamSource(new File(tutorsSchemaFilePath)));
+        
         JAXBContext jc = JAXBContext.newInstance(Tutors.class);
         Unmarshaller u = jc.createUnmarshaller();
- 
+        u.setSchema(schema);
         // Now unmarshal the object from the file
         FileInputStream fin = new FileInputStream(tutorsFilePath);
-        tutors = (Tutors)u.unmarshal(fin); // This loads the "users" object
+        tutors = (Tutors)u.unmarshal(fin); // This loads the "tutors" object
         fin.close();
     }
 
@@ -83,8 +100,15 @@ public class UsersApplication implements Serializable{
     public void updateStudentsXML(Students students, String studentsFilePath) throws Exception {
         this.students = students;
         this.studentsFilePath = studentsFilePath;
+        String studentsSchemaFilePath = studentsFilePath.substring(0, studentsFilePath.length() - 3) + "xsd";
+
+        
+        SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+        Schema schema = factory.newSchema(new StreamSource(new File(studentsSchemaFilePath)));
+        
         JAXBContext jc = JAXBContext.newInstance(Students.class);
         Marshaller m = jc.createMarshaller();
+        m.setSchema(schema);
         m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         FileOutputStream fout = new FileOutputStream(studentsFilePath);
         m.marshal(students, fout);
@@ -94,8 +118,15 @@ public class UsersApplication implements Serializable{
     public void updateTutorsXML(Tutors tutors, String tutorsFilePath) throws Exception {
         this.tutors = tutors;
         this.tutorsFilePath = tutorsFilePath;
+        String tutorsSchemaFilePath = tutorsFilePath.substring(0, tutorsFilePath.length() - 3) + "xsd";
+
+        
+        SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+        Schema schema = factory.newSchema(new StreamSource(new File(tutorsSchemaFilePath)));
+        
         JAXBContext jc = JAXBContext.newInstance(Tutors.class);
         Marshaller m = jc.createMarshaller();
+        m.setSchema(schema);
         m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         FileOutputStream fout = new FileOutputStream(tutorsFilePath);
         m.marshal(tutors, fout);
