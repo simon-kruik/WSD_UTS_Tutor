@@ -13,4 +13,10 @@ and open the template in the editor.
         <password>123456</password>
         <dob>2001-02-22</dob>
     </student>
+    <student>
+        <name>Simon</name>
+        <email>simon@simo.com</email>
+        <password>12345</password>
+        <dob>1998-08-22</dob>
+    </student>
 </students>

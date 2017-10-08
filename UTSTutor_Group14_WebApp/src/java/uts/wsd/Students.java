@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.*;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "students", namespace="http://learn.it.uts.edu.au/wsd")
 public class Students implements Serializable {
-    @XmlElement(name="student")
+    @XmlElement(name="student", namespace="http://learn.it.uts.edu.au/wsd")
     private ArrayList<Student> students = new ArrayList<Student>();
     
 

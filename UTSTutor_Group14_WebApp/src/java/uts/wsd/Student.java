@@ -14,13 +14,13 @@ import javax.xml.bind.annotation.*;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Student{
-    @XmlElement(name="name")
+    @XmlElement(name="name", namespace="http://learn.it.uts.edu.au/wsd")
     String name;
-    @XmlElement(name="email")
+    @XmlElement(name="email", namespace="http://learn.it.uts.edu.au/wsd")
     String email;
-    @XmlElement(name="password")
+    @XmlElement(name="password", namespace="http://learn.it.uts.edu.au/wsd")
     String password;
-    @XmlElement(name="dob")
+    @XmlElement(name="dob", namespace="http://learn.it.uts.edu.au/wsd")
     String dob;
 
     public String getName() {
