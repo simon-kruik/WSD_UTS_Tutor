@@ -48,6 +48,7 @@
                 String password = request.getParameter("password");
                 String dob = request.getParameter("dob");
                 String type = request.getParameter("type");
+                String subject = request.getParameter("subject");
                 out.print(dob);
 
                 if (request.getParameter("type").equals("Student") && students.checkEmail(email)) {
@@ -63,7 +64,7 @@
                     usersApp.updateStudentsXML(students, studentsFilePath);
                 }
                 if (request.getParameter("type").equals("Tutor") && tutors.checkEmail(email)) {
-                    Tutor tutor = new Tutor(name, email, password, dob);
+                    Tutor tutor = new Tutor(name, email, password, dob, subject);
                     session.setAttribute("tutor", tutor);
                     tutors.addTutor(tutor);
                     usersApp.updateTutorsXML(tutors, tutorsFilePath);

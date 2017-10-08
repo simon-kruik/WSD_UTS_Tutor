@@ -67,11 +67,11 @@
                 <td >Tutor subject</td>
                 <td>
                     <select name="subject">
-                        <option value="wsd">WSD</option>
-                        <option value ="usp">USP</option>
-                        <option value="sep">SEP</option>
-                        <option value="appProg">AppProg</option>
-                        <option value="mobileApp">MobileApp</option>
+                        <option value="WSD">WSD</option>
+                        <option value ="USP">USP</option>
+                        <option value="SEP">SEP</option>
+                        <option value="AppProg">AppProg</option>
+                        <option value="MobileApp">MobileApp</option>
                     </select>
                 </td>
             </tr>

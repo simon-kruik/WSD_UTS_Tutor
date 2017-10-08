@@ -72,6 +72,8 @@
         <p>Your name is <%=tutor.getName()%></p>
         <p>Your password is <%=tutor.getPassword()%></p>
         <p>Your date of birth is <%=tutor.getDob()%></p>
+        <p>Your subject is <%=tutor.getSubject()%></p>
+        <p>Are you available?: <%=tutor.getAvailable()%></p>
         <a href="edit_account.jsp">Edit account details</a>
         <a href="main.jsp"> Back to Main Menu </a>
 <% } %>
