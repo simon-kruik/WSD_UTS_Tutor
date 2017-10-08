@@ -22,6 +22,8 @@
     Students students = usersApp.getStudents();
     Tutors tutors = usersApp.getTutors();
     
+    //out.print(students);
+    //out.print(tutors);
     // Setting Tutor and Student values to null so they can be checked later on.
     if(request.getParameter("email") != null) {
     String email = request.getParameter("email");
@@ -101,7 +103,7 @@ else if (student == null && tutor == null) {
 
         %>
       <script language="javascript">
-         window.location = "login.jsp";
+         //window.location = "login.jsp";
       </script>
         <h2 style="color: red">
             Failure!
