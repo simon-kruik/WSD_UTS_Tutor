@@ -14,17 +14,17 @@ import javax.xml.bind.annotation.*;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Tutor {
-    @XmlElement(name="name")
+    @XmlElement(name="name", namespace="http://learn.it.uts.edu.au/wsd")
     String name;
-    @XmlElement(name="email")
+    @XmlElement(name="email", namespace="http://learn.it.uts.edu.au/wsd")
     String email;
-    @XmlElement(name="password")
+    @XmlElement(name="password", namespace="http://learn.it.uts.edu.au/wsd")
     String password;
-    @XmlElement(name="dob")
+    @XmlElement(name="dob", namespace="http://learn.it.uts.edu.au/wsd")
     String dob;
-    @XmlElement(name="subject")
+    @XmlElement(name="subject", namespace="http://learn.it.uts.edu.au/wsd")
     String subject;
-    @XmlElement(name="available")
+    @XmlElement(name="available", namespace="http://learn.it.uts.edu.au/wsd")
     String available;
     public Tutor() {
         
@@ -35,6 +35,7 @@ public class Tutor {
         this.email = email;
         this.password = password;
         this.dob = dob;
+        this.subject = "WSD";
         this.available = "Yes";
     }
 
@@ -52,7 +53,7 @@ public class Tutor {
         this.password = password;
         this.dob = dob;
         this.subject = subject;
-        this.available="yes";
+        this.available="Yes";
         
     }
 
