@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<bookings xsi:schemaLocation="http://learn.it.uts.edu.au/wsd bookings.xsd xmlns="http://learn.it.uts.edu.au/wsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<bookings xsi:schemaLocation="http://learn.it.uts.edu.au/wsd bookings.xsd" xmlns="http://learn.it.uts.edu.au/wsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <booking>
-        <bookingID>1</bookingID>
+        <bookingID>1234567890</bookingID>
         <studentName>Dally</studentName>
         <studentEmail>dally@gmail.com</studentEmail>
         <tutorName>Prof. Simon</tutorName>

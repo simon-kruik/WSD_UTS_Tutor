@@ -22,8 +22,8 @@
     
     <xs:simpleType name="tutorName">
         <xs:restriction base="xs:string">
-            <xs:pattern value="[A-Za-z.\-]+\s?[A-Za-z.\-\s]"/>
-        </xs:restriction>
+        <xs:pattern value="[A-Za-z.\-]+\s?[A-Za-z.\-\s]*"/>
+    </xs:restriction>
     </xs:simpleType>
     
     <xs:simpleType name="tutorEmail">
@@ -43,5 +43,25 @@
             <xs:pattern value="(active|cancelled|completed)"/>
         </xs:restriction>
     </xs:simpleType>
+    
+        <xs:element name="bookings">
+        <xs:complexType>
+            <xs:sequence>
+            <xs:element name="booking" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="bookingID" type="bookingID"/>
+                        <xs:element name="studentName" type="studentName"/>
+                        <xs:element name="studentEmail" type="studentEmail"/>
+                        <xs:element name="tutorName" type="tutorName"/>
+                        <xs:element name="tutorEmail" type="tutorEmail"/>
+                        <xs:element name="subject" type="subject"/>
+                        <xs:element name="status" type="status"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
     
 </xs:schema>
