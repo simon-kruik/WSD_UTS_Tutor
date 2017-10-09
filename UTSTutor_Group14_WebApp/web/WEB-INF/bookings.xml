@@ -2,12 +2,12 @@
 
 <bookings xsi:schemaLocation="http://learn.it.uts.edu.au/wsd bookings.xsd xmlns="http://learn.it.uts.edu.au/wsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <booking>
-        <bookingID></bookingID>
-        <studentName></studentName>
-        <studentEmail></studentEmail>
-        <tutorName></tutorName>
-        <tutorEmail></tutorEmail>
-        <subject></subject>
-        <status></status>
+        <bookingID>1</bookingID>
+        <studentName>Dally</studentName>
+        <studentEmail>dally@gmail.com</studentEmail>
+        <tutorName>Prof. Simon</tutorName>
+        <tutorEmail>simon@tut.com</tutorEmail>
+        <subject>SEP</subject>
+        <status>active</status>
     </booking>
 </bookings>
