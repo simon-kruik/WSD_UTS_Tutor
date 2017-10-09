@@ -16,7 +16,7 @@ import uts.wsd.*;
  *
  * @author Dallas Symons
  */
-@Path("/booking")
+@Path("/bookingApp")
 public class BookingService {
 
     @Context
@@ -49,11 +49,11 @@ public class BookingService {
         return getBookingsApp().getBookings();
     }
 
-    @Path("bookings/{bookingID}")
-    @GET
-    @Produces(MediaType.APPLICATION_XML)
-    public Booking getBooking(@PathParam("email") String email) throws Exception {
-        return getBookingsApp().getBookings().getBooking(email);
-    }
+    // @Path("bookings/{}")
+    //@GET
+   // @Produces(MediaType.APPLICATION_XML)
+    //public Booking getBooking(@PathParam("email") String email) throws Exception {
+    //    return getBookingsApp().getBookings().getBooking(email);
+    //} 
 
 }

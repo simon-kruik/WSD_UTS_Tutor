@@ -5,10 +5,10 @@ import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name="bookings")
+@XmlRootElement(name ="bookings")
 public class Bookings implements Serializable {
     
-    @XmlElement(name="booking")
+    @XmlElement(name = "booking")
     private ArrayList<Booking> bookings = new ArrayList<Booking>();
     
     public ArrayList<Booking> getBookings() {
