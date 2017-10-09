@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<xs:schema version="1.0" targetNamespace="http://learn.it.uts.edu.au/wsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://learn.it.uts.edu.au/wsd" elementFormDefault="qualified">
+
+    <xs:simpleType name="bookingID">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{10}"/>
+        </xs:restriction>     
+    </xs:simpleType>
+    
+    <xs:simpleType name="studentName">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Za-z.\-]+\s?[A-Za-z.\-\s]"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="studentEmail">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Za-z\.]+@([a-z\-])+(\.([a-z\-])+)+"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tutorName">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Za-z.\-]+\s?[A-Za-z.\-\s]"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tutorEmail">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Za-z\.]+@([a-z\-])+(\.([a-z\-])+)+"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="subject">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(SEP|WSD|USP|AppProg|MobileApp)"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="status">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(active|cancelled|completed)"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>
