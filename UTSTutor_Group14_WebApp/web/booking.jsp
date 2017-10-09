@@ -32,30 +32,72 @@
            String password = request.getParameter("password");
            String dob = request.getParameter("dob");
            }
-           
+            
         %>
-    <body>
-        <% if (session.getAttribute("student") != null) {
-            %>
+
+        <body>
+            
+        <% 
+            
+            if (session.getAttribute("student") != null) {
+            
+        %>
             
             <h1>Create a booking</h1>
+            
+            <table>
+                <form action="bookingTutor.jsp" method="post">
+                    <tr>
+                        <td>Choose subject:</td>
+                        <td>
+                            <select name="subject">
+                                <option value="WSD">WSD</option>
+                                <option value ="USP">USP</option>
+                                <option value="SEP">SEP</option>
+                                <option value="AppProg">AppProg</option>
+                                <option value="MobileApp">MobileApp</option>
+                            </select>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            
+                        </td>
+                          
+                           
+                            
+                            
+                    </tr>
+                    
+                    <tr>
+                        <td><input type="submit" value="Submit"/></td>
+                    </tr>
+                     
+                </form>
+            </table>
+            
             <p>Current bookings for <%=student.getName()%></p>
             
-            <%
+        <%
         }
-%>
-            
-         <% if (session.getAttribute("tutor") != null) {
-    %>
+        %>
+
+
+         <%
+             
+             if (session.getAttribute("tutor") != null) {
+                 
+        %>
     
             <h1>Create a booking</h1>
             <p>Current bookings for <%=tutor.getName()%>
             
             
             
-    <%
-}
-%>
+        <%
+        }
+        %>
 
 
     </body>
