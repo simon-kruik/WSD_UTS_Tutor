@@ -78,7 +78,7 @@
         <p>Your Email is <%=student.getEmail()%>.</p>
 
         <a href="booking.jsp">Make a booking</a>
-        <a href="account.jsp">My account</a>
+        <a href="account.jsp">My Account</a>
         
 
      <!--   <form>
@@ -108,7 +108,8 @@
 
         <h1>Welcome, <%=tutor.getName()%></h1>
 
-        <a href="account.jsp">My account</a>
+        <a href="account.jsp">My Account</a>
+        <a href="booking.jsp">My Bookings</a>
         <a href="logout.jsp">Logout</a>
 
 
