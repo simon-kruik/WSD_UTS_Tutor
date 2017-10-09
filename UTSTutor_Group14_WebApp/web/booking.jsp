@@ -15,8 +15,7 @@
         <title>Booking</title>
     </head>
     <% 
-          
-           
+
            Student student = (Student)session.getAttribute("student");
            if (request.getParameter("email") != null && request.getParameter("type").equals("Student")) {
            String email = request.getParameter("email");
@@ -32,9 +31,16 @@
            String password = request.getParameter("password");
            String dob = request.getParameter("dob");
            }
-            
+           
+        String bookingsFilePath = application.getRealPath("WEB-INF/bookings.xml");
+           
+
         %>
 
+        <jsp:useBean id="bookingsApp" class="uts.wsd.BookingsApplication" scope="application">
+            <jsp:setProperty name="bookingsApp" property="bookingsFilePath" value="<%=bookingsFilePath%>"/>   
+        </jsp:useBean>
+        
         <body>
             
         <% 
@@ -77,7 +83,8 @@
                 </form>
             </table>
             
-            <p>Current bookings for <%=student.getName()%></p>
+            <p>Current bookings for <%=student.getName()%>:</p>
+            
             
         <%
         }
