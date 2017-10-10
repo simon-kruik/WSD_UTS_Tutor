@@ -32,6 +32,17 @@ public class Bookings implements Serializable {
         return null;
     }
     
+    
+    // Returns true if exists
+    public boolean checkId(String id) {
+        for (Booking booking : bookings) {
+            if (booking.getBookingID().equals(id)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
     public void addBooking(Booking booking) {
         bookings.add(booking);
         //change tutor status to "unavailable"

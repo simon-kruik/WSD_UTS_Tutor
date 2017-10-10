@@ -59,38 +59,35 @@
             if (session.getAttribute("student") != null) {
             Tutors tutors = usersApp.getTutors();
             Tutor bookingTutor = tutors.searchEmail(request.getParameter("tutor"));
+            if (request.getParameter("tutor") != null && bookingTutor == null) {
+                %>
+      <script language="javascript">
+         window.location = "404.jsp";
+      </script>
+                <%
+            }
             if (bookingTutor != null) {
         %>
             
             <h1>Create a booking</h1>
             
-            <p>Creating a booking with: <%=bookingTutor.getName()%></p>
             
             <table>
-                <form action="bookingTutor.jsp" method="post">
+                <form action="bookingTutor.jsp" method="post">    
+                Creating a booking with <input type="text" name="newBookingEmail" value="<%=bookingTutor.getEmail()%>"/>
                     <tr>
-                        <td>Choose subject:</td>
-                        <td>
-                            <select name="subject">
-                                <option value="WSD">WSD</option>
-                                <option value ="USP">USP</option>
-                                <option value="SEP">SEP</option>
-                                <option value="AppProg">AppProg</option>
-                                <option value="MobileApp">MobileApp</option>
-                            </select>
-                        </td>
+                        <td><input type="submit" value="Submit"/></td>
                     </tr>
-                    
-                    <tr>
-                        <td>
-                            
-                        </td>
-                          
-                           
-                            
-                            
-                    </tr>
-                    
+                     
+                </form>
+            </table>
+            <% }
+else { 
+            %>
+<h1>Create a booking</h1>
+            <table>
+                <form action="bookingTutor.jsp" method="post">    
+                Creating a booking with <input type="text" name="newBookingEmail"/>
                     <tr>
                         <td><input type="submit" value="Submit"/></td>
                     </tr>
@@ -131,6 +128,7 @@
         }
         %>
 
-
+        <a href="main.jsp">Back to Main Menu </a>  <span>|</span>
+  <a href="logout.jsp">Logout</a>
     </body>
 </html>
