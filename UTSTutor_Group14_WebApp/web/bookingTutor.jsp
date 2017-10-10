@@ -63,7 +63,8 @@
                     }
                 }
                 Booking newBooking = new Booking(id,  student.getName(),student.getEmail(), bookingTutor.getName(), bookingTutor.getEmail(), bookingTutor.getSubject(),"active");
-                //tutors.
+                tutors.setTutorUnavailable(bookingTutor.getEmail());
+                usersApp.updateTutorsXML(tutors, tutorsFilePath);
                 bookings.addBooking(newBooking);
                 bookingsApp.updateBookingsXML(bookings, bookingsFilePath);
 

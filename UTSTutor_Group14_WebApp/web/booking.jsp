@@ -81,6 +81,19 @@
                      
                 </form>
             </table>
+            <% }
+else { 
+            %>
+<h1>Create a booking</h1>
+            <table>
+                <form action="bookingTutor.jsp" method="post">    
+                Creating a booking with <input type="text" name="newBookingEmail"/>
+                    <tr>
+                        <td><input type="submit" value="Submit"/></td>
+                    </tr>
+                     
+                </form>
+            </table>
             <% } %>
             <p>Current bookings for <%=student.getName()%>:</p>
             
