@@ -54,7 +54,8 @@
         <body>
                     <h1> Bookings </h1>
         <% 
-            if (request.getParameter("type").equals("single")) {
+            
+            if (request.getParameter("type") != null) {
                 %>
                 
                 <jsp:include page="bookingSingle.jsp"/>
