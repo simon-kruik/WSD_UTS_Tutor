@@ -8,7 +8,7 @@
         <tutorName>Prof. Simon</tutorName>
         <tutorEmail>simon@tut.com</tutorEmail>
         <subject>SEP</subject>
-        <status>active</status>
+        <status>completed</status>
     </booking>
     <booking>
         <bookingID>3214567890</bookingID>
@@ -35,6 +35,6 @@
         <tutorName>Tutory Tute</tutorName>
         <tutorEmail>test@anemail.com</tutorEmail>
         <subject>WSD</subject>
-        <status>active</status>
+        <status>cancelled</status>
     </booking>
 </bookings>

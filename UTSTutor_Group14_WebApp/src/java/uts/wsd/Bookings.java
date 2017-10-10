@@ -55,13 +55,26 @@ public class Bookings implements Serializable {
     
     public void updateBooking(Booking booking) {
         //change booking status: active, cancelled, or completed
-    
+        Booking updatedBooking = booking;
+        bookings.remove(getBooking(booking.getBookingID()));
+        bookings.add(updatedBooking);
+         
     }
     
     public Bookings searchEmail(String email) {
         ArrayList<Booking> bookingsList = new ArrayList<Booking>();
         for(Booking booking : bookings) {
             if (booking.getStudentEmail().equals(email) || booking.getTutorEmail().equals(email)) {
+                bookingsList.add(booking);
+            }
+        }
+        return new Bookings(bookingsList);
+    }
+    
+    public Bookings searchId(String id) {
+        ArrayList<Booking> bookingsList = new ArrayList<Booking>();
+        for(Booking booking : bookings) {
+            if (booking.getBookingID().equals(id)) {
                 bookingsList.add(booking);
             }
         }
@@ -81,7 +94,7 @@ public class Bookings implements Serializable {
                 + "</tr> \n";
         for (Booking booking : bookings) {
                 details += "<tr> \n"
-                    + "<td class='search'>" + "<a href=\"booking.jsp?type=\"single\"&\"id=\"" +booking.getBookingID() + "\">" +booking.getBookingID() + "</a></td> \n"
+                    + "<td class='search'>" + "<a href=\"booking.jsp?type=single&id=" +booking.getBookingID() + "\">" +booking.getBookingID() + "</a></td> \n"
                     + "<td class='search'>" + booking.getStudentName() + "</td> \n"
                     + "<td class='search'>" + booking.getStudentEmail() + "</td> \n"
                     + "<td class='search'>" + booking.getTutorName() + "</td> \n"
