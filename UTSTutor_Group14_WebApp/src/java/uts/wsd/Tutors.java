@@ -70,13 +70,25 @@ public class Tutors implements Serializable {
                 + "<th class='search'> Subject </th> \n"
                 + "</tr> \n";
         for (Tutor tutor : tutors) {
+            if (tutor.getAvailable().equals("Yes")) {
             details += "<tr> \n"
                     + "<td class='search'>" + tutor.getName() + "</td> \n"
                     + "<td class='search'>" + tutor.getEmail() + "</td> \n"
                     + "<td class='search'>" + tutor.getAvailable() + "</td> \n"
                     + "<td class='search'>" + tutor.getSubject() + "</td> \n"
+                    + "<td class='search'>" + "<a href = \"booking.jsp?tutor=" + tutor.getEmail() + "\">Book</a> </td> \n"
                     + "</tr> \n";
-        }
+            }
+            else {
+                details += "<tr> \n"
+                    + "<td class='search'>" + tutor.getName() + "</td> \n"
+                    + "<td class='search'>" + tutor.getEmail() + "</td> \n"
+                    + "<td class='search'>" + tutor.getAvailable() + "</td> \n"
+                    + "<td class='search'>" + tutor.getSubject() + "</td> \n"
+                    + "</tr> \n";
+                 }
+            }
+        
         details += "</table>";
         return details;
     }
@@ -110,5 +122,13 @@ public class Tutors implements Serializable {
             }
         }
         return new Tutors(matchingTutors);
+    }
+    public Tutor searchEmail(String email) {
+        for (Tutor tutor : tutors) {
+            if (tutor.getEmail().equals(email)) {
+                return tutor;
+            }
+        }
+        return null;
     }
 }
