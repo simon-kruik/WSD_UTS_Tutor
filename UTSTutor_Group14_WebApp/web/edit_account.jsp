@@ -16,6 +16,9 @@
         <title>Edit account</title>
          
     </head>
+    
+    <h1> Edit Account </h1>
+    
     <body>
         <h1>Edit account details</h1>
         <form action="account.jsp" method="post">

@@ -49,8 +49,10 @@
             <jsp:setProperty name="usersApp" property="tutorsFilePath" value="<%=tutorsFilePath%>"/>
         </jsp:useBean>
         
+
+        
         <body>
-            
+                    <h1> Bookings </h1>
         <% 
             if (request.getParameter("type").equals("single")) {
                 %>

@@ -24,6 +24,9 @@
                 }
         </script>
     </head>
+    
+    <h1> Register </h1>
+    
     <body>        
         <h1>Registration</h1>
         <table>

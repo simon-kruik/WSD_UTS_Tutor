@@ -15,6 +15,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Main Page</title>
     </head>
+    
+    <h1> Home page </h1>
 
     <%
 

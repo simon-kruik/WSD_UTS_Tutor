@@ -38,6 +38,7 @@
         <title>View account</title>
     </head>
 
+    <h1> My Account </h1>
 
     <%        // If statement to see if the student/tutor has updated account details posted from edit_account // 
         if (session.getAttribute("student") != null) {
