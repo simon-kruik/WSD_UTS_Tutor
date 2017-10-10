@@ -46,6 +46,13 @@ public class Tutors implements Serializable {
         tutors.remove(oldTutor);
         tutors.add(oldTutor);
     }
+    
+    public void setTutorAvailable(String email) {
+        Tutor oldTutor = searchEmail(email);
+        oldTutor.setAvailable("Yes");
+        tutors.remove(oldTutor);
+        tutors.add(oldTutor);
+    }
     public Tutor login(String email, String password) {
         for (Tutor tutor : tutors) {
             if (tutor.getEmail().equals(email)) {

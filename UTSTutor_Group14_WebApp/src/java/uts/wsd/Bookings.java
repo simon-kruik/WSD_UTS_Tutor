@@ -81,7 +81,7 @@ public class Bookings implements Serializable {
                 + "</tr> \n";
         for (Booking booking : bookings) {
                 details += "<tr> \n"
-                    + "<td class='search'>" + booking.getBookingID() + "</td> \n"
+                    + "<td class='search'>" + "<a href=\"booking.jsp?type=\"single\"&\"id=\"" +booking.getBookingID() + "\">" +booking.getBookingID() + "</a></td> \n"
                     + "<td class='search'>" + booking.getStudentName() + "</td> \n"
                     + "<td class='search'>" + booking.getStudentEmail() + "</td> \n"
                     + "<td class='search'>" + booking.getTutorName() + "</td> \n"

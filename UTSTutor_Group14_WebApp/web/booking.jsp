@@ -52,9 +52,15 @@
         <body>
             
         <% 
-            
+            if (request.getParameter("type").equals("single")) {
+                %>
+                
+                <jsp:include page="bookingSingle.jsp"/>
+                             
+                <%
+            }
+            else {
             Bookings bookings = bookingsApp.getBookings();
-            
             
             if (session.getAttribute("student") != null) {
             Tutors tutors = usersApp.getTutors();
@@ -126,6 +132,7 @@ else {
             
         <%
         }
+}
         %>
 
         <a href="main.jsp">Back to Main Menu </a>  <span>|</span>
