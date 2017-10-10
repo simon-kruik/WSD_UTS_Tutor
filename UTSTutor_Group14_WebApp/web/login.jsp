@@ -15,6 +15,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login</title>
     </head>
+    
+    <h1> Login </h1>
+    
     <%
         String errorMessage = " ";
         if (session.getAttribute("errorMessage") != null) {
