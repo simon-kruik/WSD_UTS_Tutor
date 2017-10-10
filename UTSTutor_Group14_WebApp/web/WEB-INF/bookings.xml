@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<?xml-stylesheet type="text/xsl" href="bookings.xsl"?>
 <bookings xmlns="http://learn.it.uts.edu.au/wsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://learn.it.uts.edu.au/wsd bookings.xsd">
     <booking>
         <bookingID>1234567890</bookingID>
