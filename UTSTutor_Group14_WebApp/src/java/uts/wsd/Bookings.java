@@ -17,7 +17,7 @@ public class Bookings implements Serializable {
     
     public Booking getBooking(String bookingID) {
         for (Booking booking : bookings) {
-            if (booking.getBookingID() == bookingID) {
+            if (booking.getBookingID().equals(bookingID)) {
                 return booking;
             }
         }
