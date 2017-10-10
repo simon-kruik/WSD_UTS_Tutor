@@ -9,6 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="styles.css">
         <link rel="SHORTCUT ICON" href="favicon.ico" />
         <link rel="icon" href="favicon.ico" type="image/ico" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

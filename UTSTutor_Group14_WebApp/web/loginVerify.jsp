@@ -33,6 +33,7 @@
 <html>
     <head>
         <link rel="SHORTCUT ICON" href="favicon.ico" />
+        <link rel="stylesheet" href="styles.css">
         <link rel="icon" href="favicon.ico" type="image/ico" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

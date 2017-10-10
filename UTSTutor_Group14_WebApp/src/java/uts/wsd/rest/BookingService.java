@@ -49,11 +49,11 @@ public class BookingService {
         return getBookingsApp().getBookings();
     }
 
-    // @Path("bookings/{}")
-    //@GET
-   // @Produces(MediaType.APPLICATION_XML)
-    //public Booking getBooking(@PathParam("email") String email) throws Exception {
-    //    return getBookingsApp().getBookings().getBooking(email);
-    //} 
-
+    @Path("bookings/{bookingID}")
+    @GET
+    @Produces(MediaType.APPLICATION_XML)
+    public Booking getBooking(@PathParam("bookingID") String bookingID) throws Exception {
+    return getBookingsApp().getBookings().getBooking(bookingID);
+    } 
 }
+
