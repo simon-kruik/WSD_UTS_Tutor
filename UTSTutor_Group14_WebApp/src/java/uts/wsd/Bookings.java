@@ -10,6 +10,14 @@ public class Bookings implements Serializable {
     
     @XmlElement(name = "booking")
     private ArrayList<Booking> bookings = new ArrayList<Booking>();
+
+    public Bookings() {
+    
+    }
+    
+    public Bookings(ArrayList<Booking> bookings) {
+        this.bookings=bookings;
+    }
     
     public ArrayList<Booking> getBookings() {
         return bookings;
@@ -38,5 +46,41 @@ public class Bookings implements Serializable {
         //change booking status: active, cancelled, or completed
     
     }
+    
+    public Bookings searchEmail(String email) {
+        ArrayList<Booking> bookingsList = new ArrayList<Booking>();
+        for(Booking booking : bookings) {
+            if (booking.getStudentEmail().equals(email) || booking.getTutorEmail().equals(email)) {
+                bookingsList.add(booking);
+            }
+        }
+        return new Bookings(bookingsList);
+    }
 
+    public String printDetails() {
+        String details = "<table class='search'> \n" 
+                + "<tr> \n"
+                + "<th class='search'> BookingID </th>\n"
+                + "<th class='search'> Student Name </th> \n"
+                + "<th class='search'> Student Email</th> \n"
+                + "<th class='search'> Tutor Name </th> \n"
+                + "<th class='search'> Tutor Email </th> \n"
+                + "<th class='search'> Subject </th> \n"
+                + "<th class='search'> Status </th> \n"                
+                + "</tr> \n";
+        for (Booking booking : bookings) {
+                details += "<tr> \n"
+                    + "<td class='search'>" + booking.getBookingID() + "</td> \n"
+                    + "<td class='search'>" + booking.getStudentName() + "</td> \n"
+                    + "<td class='search'>" + booking.getStudentEmail() + "</td> \n"
+                    + "<td class='search'>" + booking.getTutorName() + "</td> \n"
+                    + "<td class='search'>" + booking.getTutorEmail() + "</td> \n"
+                    + "<td class='search'>" + booking.getSubject() + "</td> \n"
+                    + "<td class='search'>" + booking.getStatus() + "</td> \n"
+                    + "</tr> \n";
+                 }
+        details += "</table>";
+        return details;
+
+}
 }

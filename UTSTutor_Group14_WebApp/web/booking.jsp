@@ -53,6 +53,9 @@
             
         <% 
             
+            Bookings bookings = bookingsApp.getBookings();
+            
+            
             if (session.getAttribute("student") != null) {
             Tutors tutors = usersApp.getTutors();
             Tutor bookingTutor = tutors.searchEmail(request.getParameter("tutor"));
@@ -94,13 +97,18 @@
                      
                 </form>
             </table>
-            
+            <% } %>
             <p>Current bookings for <%=student.getName()%>:</p>
             
-            
+            <%
+                
+                Bookings personalBookings = bookings.searchEmail(student.getEmail());
+                %>
+                
+                <%=personalBookings.printDetails()%>
+                
         <%
         }
-}
         %>
 
 
@@ -113,7 +121,11 @@
             <h1>Create a booking</h1>
             <p>Current bookings for <%=tutor.getName()%>
             
+            <%
+            Bookings personalBookings = bookings.searchEmail(tutor.getEmail());
+            %>
             
+            <%=personalBookings.printDetails()%>
             
         <%
         }

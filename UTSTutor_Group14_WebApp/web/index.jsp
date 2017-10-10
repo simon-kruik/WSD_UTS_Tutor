@@ -41,6 +41,8 @@
                     
             <ul>
                 <li><a href="account.jsp">My Account</a></li>
+                <li><a href="main.jsp">Main Page</a></li>
+
             </ul>
             
         <% } 
@@ -59,6 +61,7 @@
                     
             <ul>
                 <li><a href="account.jsp">My Account</a></li>
+                <li><a href="main.jsp">Main Page</a></li>
             </ul>
             
         <% } %>
