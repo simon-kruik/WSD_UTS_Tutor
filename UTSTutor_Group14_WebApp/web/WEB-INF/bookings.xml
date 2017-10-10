@@ -10,4 +10,31 @@
         <subject>SEP</subject>
         <status>active</status>
     </booking>
+    <booking>
+        <bookingID>3214567890</bookingID>
+        <studentName>Simon</studentName>
+        <studentEmail>simon@simon.com</studentEmail>
+        <tutorName>Tutory Tute</tutorName>
+        <tutorEmail>test@anemail.com</tutorEmail>
+        <subject>WSD</subject>
+        <status>active</status>
+    </booking>
+    <booking>
+        <bookingID>1234657890</bookingID>
+        <studentName>Simon</studentName>
+        <studentEmail>simon@simon.com</studentEmail>
+        <tutorName>Prof. Simon</tutorName>
+        <tutorEmail>simon@tut.com</tutorEmail>
+        <subject>SEP</subject>
+        <status>active</status>
+    </booking>
+    <booking>
+        <bookingID>2134567890</bookingID>
+        <studentName>Dally</studentName>
+        <studentEmail>dally@gmail.com</studentEmail>
+        <tutorName>Tutory Tute</tutorName>
+        <tutorEmail>test@anemail.com</tutorEmail>
+        <subject>WSD</subject>
+        <status>active</status>
+    </booking>
 </bookings>

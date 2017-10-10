@@ -7,29 +7,28 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 
-@XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Booking implements Serializable {
     
-    @XmlElement(name="bookingID")
+    @XmlElement(name="bookingID", namespace="http://learn.it.uts.edu.au/wsd")
     String bookingID;
     
-    @XmlElement(name="studentName")
+    @XmlElement(name="studentName", namespace="http://learn.it.uts.edu.au/wsd")
     String studentName;
     
-    @XmlElement(name="studentEmail")
+    @XmlElement(name="studentEmail", namespace="http://learn.it.uts.edu.au/wsd")
     String studentEmail;
     
-    @XmlElement(name="tutorName")
+    @XmlElement(name="tutorName", namespace="http://learn.it.uts.edu.au/wsd")
     String tutorName;
     
-    @XmlElement(name="tutorEmail")
+    @XmlElement(name="tutorEmail", namespace="http://learn.it.uts.edu.au/wsd")
     String tutorEmail;
     
-    @XmlElement(name="subject")
+    @XmlElement(name="subject", namespace="http://learn.it.uts.edu.au/wsd")
     String subject;
     
-    @XmlElement(name="status")
+    @XmlElement(name="status", namespace="http://learn.it.uts.edu.au/wsd")
     String status;
     
     public Booking() {
